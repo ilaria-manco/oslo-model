@@ -110,7 +110,7 @@ def results(system_size, N, directory):
     
     system = System(system_size)
     relaxation = Relaxation(system)
-    newdir = '/Users/Ilaria/Documents/Imperial/Third Year/C&N/Data/with_avalanche_size/'+str(int(N))+'/'+str(system_size)
+    newdir = 'path'+str(int(N))+'/'+str(system_size)
     #check if directory with results for system size = L already exists (no need for experiment)
     if not os.path.exists(newdir):
         experiment = relaxation.iterate(N)
