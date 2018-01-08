@@ -312,12 +312,12 @@ class Scaling:
         plt.show()
   
     def log_bin_data(self, system, a = 1.4):
-        os.chdir('/Users/Ilaria/Documents/Imperial/Third Year/C&N/Data/with_avalanche_size/' + str(int(1e6)) +'/'+str(system.system_size))
+        os.chdir('path'/'+str(system.system_size))
         f = open('Avalanche Size.txt', 'r')
         x = []
         for line in f:
             x.append(float(line))
-        os.chdir('/Users/Ilaria/Documents/Imperial/Third Year/C&N/Code')
+        os.chdir('path')
         x = np.array([int(z) for z in x])
         vals, counts = lb.frequency(x)
         b, c = lb.log_bin(x, 1., 1.5, a, 'integer', debug_mode=False, drop_zeros = False)
